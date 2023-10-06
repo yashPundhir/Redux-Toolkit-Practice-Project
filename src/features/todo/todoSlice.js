@@ -20,6 +20,14 @@ export const todoSlice = createSlice({
 			};
 			state.todos.push(todo);
 		},
-		removeTodo: () => {},
+		removeTodo: (state, action) => {
+			const id = action.payload.id;
+			// for (const todo of state.todos) {
+			// 	if (id === todo.id) {
+			// 		state.todos.pop(todo);
+			// 	}
+			// }
+			state.todos = state.todos.filter((todo) => todo.id !== id);
+		},
 	},
 });
