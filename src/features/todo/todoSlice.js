@@ -16,12 +16,12 @@ export const todoSlice = createSlice({
 		addTodo: (state, action) => {
 			const todo = {
 				id: nanoid(),
-				text: action.payload.text,
+				text: action.payload,
 			};
 			state.todos.push(todo);
 		},
 		removeTodo: (state, action) => {
-			const id = action.payload.id;
+			const id = action.payload;
 			// for (const todo of state.todos) {
 			// 	if (id === todo.id) {
 			// 		state.todos.pop(todo);
