@@ -1,5 +1,6 @@
 import "./App.css";
 import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
 
 function App() {
 	return (
@@ -8,6 +9,7 @@ function App() {
 				Redux Toolkit Practice Project
 			</h1>
 			<AddTodo />
+			<Todos />
 		</div>
 	);
 }
